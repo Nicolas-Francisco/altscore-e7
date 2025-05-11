@@ -13,11 +13,11 @@ def status(
         print("pressure", pressure)
         liquid_vol = specific_volume_liquid(pressure)
         vapor_vol = specific_volume_vapor(pressure)
-        print("liquid_vol", liquid_vol)
-        print("vapor_vol", vapor_vol)
+        print("liquid_vol", round(liquid_vol, 4))
+        print("vapor_vol", round(vapor_vol, 4))
         return {
-            "specific_volume_liquid": liquid_vol,
-            "specific_volume_vapor": vapor_vol,
+            "specific_volume_liquid": round(liquid_vol, 4),
+            "specific_volume_vapor": round(vapor_vol, 4),
         }
     except Exception as e:
         return {"error": str(e)}
